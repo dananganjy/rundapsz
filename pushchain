@@ -1,0 +1,19 @@
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
